@@ -1,0 +1,16 @@
+{
+  "name": "/home/ebarkey/public_html/328/pets5",
+  "authors": [
+    {
+      "name": "Eric Barkey",
+      "email": "ebarkey2@mail.greenriver.edu"
+    },
+    {
+      "name": "Collin Woodruff",
+      "email": "Cwoodruff@mail.greenriver.edu"
+    }
+  ],
+  "require": {
+    "bcosca/fatfree-core": "dev-master"
+  }
+}

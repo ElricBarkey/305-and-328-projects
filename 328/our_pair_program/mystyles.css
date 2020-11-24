@@ -1,0 +1,19 @@
+
+body
+{
+    background-color: lightgray;
+    margin: 0px 200px;
+}
+
+#main
+{
+    background-color: white;
+    padding: 1em 5em 3em 5em;
+}
+
+
+.btn
+{
+    background-color: red;
+    border-color: red;
+}

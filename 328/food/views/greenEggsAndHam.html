@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to my food page</title>
+</head>
+<body>
+<h1>Welcome to my green eggs and ham page!!!!</h1>
+<br>
+<img src="/328/food/images/greeneggs.jpg" alt="broken">
+</body>
+</html>

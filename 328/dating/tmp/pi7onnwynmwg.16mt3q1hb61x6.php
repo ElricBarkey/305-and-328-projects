@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>My dating website</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#">My Dating Website</a>
+        </nav>
+
+        <div id="innerCon">
+            <div class="row">
+                <div class="col-md-6 col-lg-6">
+                    <h1>My Dating Website</h1>
+                    <br>
+                    <p id="firstPara">Welcome to the web's most successful dating website. At <strong>My Dating Website</strong>
+                        you'll meet another like minded individual. We have the highest success rate of couple on
+                        the web. User's are matched by interest and location. Find out whu so many others
+                        have found love on out site!
+                    </p>
+                    <br>
+
+                    <h3>Hear what our users are saying about us</h3>
+                    <hr>
+                    <i>"I met the love of my life after only a month!" - Andrea <br>
+                    "It was so easy to set up and profile and start meeting people. I didn't realize how mandy
+                        others were looking for love in my area" -John Smith <br>
+                    "Just try it! You'll never be the same!" -Sarah</i>
+                    <hr>
+                    <div class="text-center">
+                        <a class="btn btn-primary" href="personal">Next ></a>
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 col-lg-6">
+                    <img  src="images/online_dating_final_50.jpg" alt="broken">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+</html>

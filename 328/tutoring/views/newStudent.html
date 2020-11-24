@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <include href="includes/head.html"></include>
+    <title>New Student</title>
+</head>
+<body>
+
+<!-- Nav bar -->
+<include href="includes/nav.html"></include>
+
+<!-- Page content -->
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+
+            <h1 class="my-5">Add New Student</h1>
+
+            <!-- New student form -->
+            <form method="post" action="#" class="bg-light p-5 mb-3" novalidate>
+
+                <!-- First name -->
+                <div class="form-group">
+                    <label for="fname">First Name</label>
+                    <input type="text" class="form-control" id="fname" name="fname" aria-describedby="first name" placeholder="" value="{{ @fname }}">
+                    <check if="isset(@errors['fname'])">
+                        <div class="small my-1 py-1 alert alert-dark" role="alert">{{ @errors['fname'] }}</div>
+                    </check>
+                </div>
+
+                <!-- Last name -->
+                <div class="form-group">
+                    <label for="lname">Last Name</label>
+                    <input type="text" class="form-control" id="lname" name="lname" aria-describedby="last name" placeholder="" value="{{ @lname }}">
+                    <check if="isset(@errors['lname'])">
+                        <div class="small my-1 py-1 alert alert-dark" role="alert">{{ @errors['lname'] }}</div>
+                    </check>
+                </div>
+
+                <!-- SID -->
+                <div class="form-group">
+                    <label for="sid">Student Identification (SID) Number</label>
+                    <input type="text" class="form-control" id="sid" name="sid" aria-describedby="student id number" placeholder="" value="{{ @sid }}">
+                    <check if="isset(@errors['sid'])">
+                        <div class="small my-1 py-1 alert alert-dark" role="alert">{{ @errors['sid'] }}</div>
+                    </check>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" aria-describedby="email" placeholder="" value="{{ @email }}">
+                    <check if="isset(@errors['email'])">
+                        <div class="small my-1 py-1 alert alert-dark" role="alert">{{ @errors['email'] }}</div>
+                    </check>
+                </div>
+
+                <!-- Tutor -->
+                <div class="form-check mb-2">
+                    <input type="checkbox" class="form-check-input" id="isTutor" name="isTutor" <check if="{{ @isTutor }}">checked='checked'</check>>
+                    <label class="form-check-label" for="isTutor">Yes, this student is a tutor</label>
+                </div>
+
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+</body>
+</html>

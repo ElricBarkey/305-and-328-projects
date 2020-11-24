@@ -1,0 +1,61 @@
+#mainCon
+{
+    background-color: lightgray;
+    padding: 80px 30px 40px;
+}
+body
+{
+    background-color: darkgrey;
+    margin: 150px;
+}
+
+.navbar-toggler
+{
+    font-size: 16px;
+    color: white;
+}
+.bg-dark
+{
+    background-color: lightslategrey !important;
+}
+
+#logo-title
+{
+    background-color: rgb(33, 37, 41);
+    box-sizing: border-box;
+    margin-left: 4px;
+    margin-right: 4px;
+    padding: 14px 16px;
+    color: white;
+    line-height: 24px;
+}
+
+#menubtn
+{
+    color: white;
+    background-color: #333;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: white;
+}
+
+li a:hover {
+    background-color: lightgrey;
+}

@@ -1,0 +1,30 @@
+fieldset
+{
+    border: solid 1px darkblue;
+    padding: 1em;
+    background-color: lightgray;
+
+}
+
+legend
+{
+    color:darkgrey;
+    font-variant: small-caps;
+}
+
+#formB
+{
+    background-color: lightblue;
+}
+
+.btn
+{
+    background-color: lightblue;
+    border-color: gray;
+}
+
+.err
+{
+    color: darkred;
+    visibility: hidden;
+}

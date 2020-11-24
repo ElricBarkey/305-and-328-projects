@@ -1,0 +1,17 @@
+{
+  "name": "ebarkey/328/foodb",
+  "authors":
+  [
+    {
+      "name": "Elric Barkey",
+      "email": "tostrander@greenriver.edu"
+    }
+  ],
+  "require":
+  {
+    "bcosca/fatfree-core": "dev-master"
+  },
+  "autoload": {
+    "classmap": ["classes/", "model/", "controllers/"]
+  }
+}

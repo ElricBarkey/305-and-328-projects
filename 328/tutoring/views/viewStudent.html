@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <include href="includes/head.html"></include>
+    <title>View Student</title>
+</head>
+<body>
+
+<!-- Nav bar -->
+<include href="includes/nav.html"></include>
+
+<!-- Page content -->
+<div class="container">
+
+    <h1 class="my-5">View Student</h1>
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+
+            <!-- Student profile form -->
+            <form method="post" action="" class="bg-light p-5 mb-3">
+
+                <h3>Profile</h3>
+                <hr>
+
+                <!-- First name -->
+                <div class="form-group">
+                    <label for="fname">First Name</label>
+                    <input type="text" class="form-control" id="fname" aria-describedby="first name" placeholder="" value="{{ @fname }}" readonly>
+                </div>
+
+                <!-- Last name -->
+                <div class="form-group">
+                    <label for="lname">Last Name</label>
+                    <input type="text" class="form-control" id="lname" aria-describedby="last name" placeholder="" value="{{ @lname }}" readonly>
+                </div>
+
+                <!-- SID -->
+                <div class="form-group">
+                    <label for="sid">Student Identification (SID) Number</label>
+                    <input type="text" class="form-control" id="sid" aria-describedby="student id number" placeholder="" value="{{ @sid }}" readonly>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="" value="{{ @email }}" readonly>
+                </div>
+
+            </form>
+
+        </div>
+
+        <div class="col-md-6">
+
+            <!-- Add attendance form -->
+            <form method="post" action="" class="bg-light p-5 mb-3">
+
+                <h3>Add Attendance</h3>
+                <hr>
+
+                <!-- Date -->
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <div class="form-group">
+                            <label for="date">Date</label>
+                            <input type="text" class="form-control" id="date" name="date" aria-describedby="date" placeholder="mm/dd/yyyy" onfocus="(this.type='date')" value="{{ @date }}">
+                            <check if="isset(@errors['date'])">
+                                <div class="small my-1 py-1 alert alert-dark" role="alert">{{ @errors['date'] }}</div>
+                            </check>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Time in/out -->
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <!-- Time in -->
+                        <div class="form-group">
+                            <label for="timein">Time In</label>
+                            <input type="time" class="form-control" id="timein" name="timein" aria-describedby="time in"
+                            <check if="@timein">
+                                <true>value="{{ @timein }}"</true>
+                                <false>value="00:00"</false>
+                            </check>>
+
+                            <check if="isset(@errors['timein'])">
+                                <div class="small my-1 py-1 alert alert-dark" role="alert">{{ @errors['timein'] }}</div>
+                            </check>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+
+                        <!-- Time out -->
+                        <div class="form-group">
+                            <label for="timeout">Time Out</label>
+                            <input type="time" class="form-control" id="timeout" name="timeout" aria-describedby="time out"
+                            <check if="@timeout">
+                                <true>value="{{ @timeout }}"</true>
+                                <false>value="00:00"</false>
+                            </check>>
+
+                            <check if="isset(@errors['timeout'])">
+                                <div class="small my-1 py-1 alert alert-dark" role="alert">{{ @errors['timeout'] }}</div>
+                            </check>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Course/Instructor -->
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <!-- Courses -->
+                        <div class="form-group">
+                            <label for="course">Course</label>
+                            <select class="custom-select" id="course" name="course">
+
+                                <check if="isset({{ @selectedCourse }})">
+                                    <true>
+                                        <option></option>
+                                        <repeat group="{{ @courses }}" value="{{ @course }}">
+                                            <option value="{{ @course }}" <check if="{{ @selectedCourse == @course }}">selected</check>>{{ strtoupper(@course) }}</option>
+                                        </repeat>
+                                    </true>
+                                    <false>
+                                        <option selected></option>
+                                        <repeat group="{{ @courses }}" value="{{ @course }}">
+                                            <option value="{{ @course }}">{{ strtoupper(@course) }}</option>
+                                        </repeat>
+                                    </false>
+                                </check>
+
+                            </select>
+
+                            <!-- Error msg -->
+                            <check if="isset(@errors['course'])">
+                                <div class="small my-1 py-1 alert alert-dark" role="alert">{{ @errors['course'] }}</div>
+                            </check>
+
+                        </div>
+
+                    </div>
+                    <div class="col-md-6">
+
+                        <!-- Instructors -->
+                        <div class="form-group">
+                            <label for="instructor">Instructor</label>
+                            <select class="custom-select" id="instructor" name="instructor">
+
+                                <check if="isset({{ @selectedInstructor }})">
+                                    <true>
+                                        <option></option>
+                                        <repeat group="{{ @instructors }}" value="{{ @instructor }}">
+                                            <option value="{{ @instructor }}" <check if="{{ @selectedInstructor == @instructor }}">selected</check>>{{ ucfirst(@instructor) }}</option>
+                                        </repeat>
+                                    </true>
+                                    <false>
+                                        <option selected></option>
+                                        <repeat group="{{ @instructors }}" value="{{ @instructor }}">
+                                            <option value="{{ @instructor }}" <check if="{{ @selectedInstructor == @instructor }}">selected</check>>{{ ucfirst(@instructor) }}</option>
+                                        </repeat>
+                                    </false>
+                                </check>
+
+                            </select>
+
+                            <!-- Error msg -->
+                            <check if="isset(@errors['instructor'])">
+                                <div class="small my-1 py-1 alert alert-dark" role="alert">{{ @errors['instructor'] }}</div>
+                            </check>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Notes -->
+                <div class="row">
+
+                    <div class="col-md-12">
+
+                        <div class="form-group">
+                            <label for="notes">Notes</label>
+                            <textarea class="form-control" id="notes" name="notes" rows="3">{{ @notes }}</textarea>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Success message -->
+                <check if="isset(@errors['none'])">
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        {{ @errors['none'] }}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                </check>
+
+                <!-- Save button -->
+                <button type="submit" class="btn btn-primary btn-block">Save</button>
+                <br>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

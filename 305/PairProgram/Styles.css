@@ -1,0 +1,20 @@
+.err
+{
+    color : darkred;
+    visibility: hidden;
+}
+
+body
+{
+    margin: 200px;
+    padding: 10px;
+}
+
+
+fieldset
+{
+    border: solid 10px orange;
+    background: grey;
+    padding: 20px;
+}
+
